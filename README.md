@@ -45,7 +45,7 @@ El proyecto sigue un diseño basado en clases que modelan las entidades principa
 
 * **Lenguaje de Programación:** Java
 * **Interfaz de Usuario:** Java Swing
-* **Entorno de Desarrollo (IDE):** (Asume el uso de un IDE común como IntelliJ IDEA, Eclipse o NetBeans)
+* **Entorno de Desarrollo (IDE):** IntelliJ IDEA
 
 ---
 

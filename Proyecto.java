@@ -7,8 +7,6 @@ Luis Manuel Anaya Maldonado - 2330267
 Gibran Emmanuel García Cervantes - 2330219
 
 PROYECTO: Sistema gestor de estudiantes y calificaciones de unidades
-
-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
  */
 
 import javax.swing.*; // Librería de diseño

@@ -321,9 +321,9 @@ public class Proyecto {
             // Panel para unidades (dentro de cada materia)
             JPanel panelUnidades = new JPanel();
             panelUnidades.setLayout(new BoxLayout(panelUnidades, BoxLayout.Y_AXIS));
-            panelUnidades.setBackground(new Color(252, 252, 252)); // Fondo aún más claro para unidades
+            panelUnidades.setBackground(new Color(252, 252, 252));
             panelUnidades.setBorder(BorderFactory.createTitledBorder(
-                    BorderFactory.createLineBorder(new Color(220, 220, 220)), // Borde suave
+                    BorderFactory.createLineBorder(new Color(220, 220, 220)),
                     "Unidades",
                     TitledBorder.LEFT, TitledBorder.TOP,
                     new Font("Segoe UI", Font.PLAIN, 12),
@@ -430,7 +430,6 @@ public class Proyecto {
             panelMateria.add(botonAgregarUnidad, configLayoutM);
 
             panelesMaterias.add(panelMateria);
-            camposNombreMateria.add(campoMateria); // Asegúrate de que el campo de materia se agrega aquí
             camposUnidades.add(currentCamposUnidad); // Agrega la lista de campos de nombres de unidad
             camposCalifUnidades.add(currentCamposCalifUnidad); // Agrega la lista de campos de calificaciones de unidad
 
@@ -670,12 +669,16 @@ public class Proyecto {
                     throw new IllegalArgumentException("Nombre y matrícula son obligatorios");
                 }
 
-                // Verificar si la matrícula ya existe
+                // Verificar si la matrícula o el nombre ya existen (modificación aquí)
                 for (Estudiante est : estudiantes) {
                     if (est.matricula.equals(matricula)) {
                         throw new IllegalArgumentException("La matrícula ya ha sido registrada");
                     }
+                    if (est.nombre.equalsIgnoreCase(nombre)) {
+                        throw new IllegalArgumentException("El nombre de estudiante ya está registrado");
+                    }
                 }
+                // Resto del código permanece igual...
 
                 Estudiante estudiante = new Estudiante(nombre, matricula);
 
